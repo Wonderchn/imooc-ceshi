@@ -12,7 +12,7 @@
     <artifactId>foodie-dev-mapper</artifactId>
 
     <dependencies>
-<!--        mapper ->  pojo -> common
+<!--        mapper ->  mapper -> common
             mapper 通过pojo是可以使用common相应的方法的
 
 -->

@@ -16,8 +16,8 @@
 
             <!--
             common-mail
-            api->  service->mapper ->  pojo -> common
-            api 通过service是可以使用 mapper-> pojo 与 common相应的方法的
+            api->  service->mapper ->  mapper -> common
+            api 通过service是可以使用 mapper-> mapper 与 common相应的方法的
             假设现在有有一个common-mail
             api -> common-mail  api可以直接引用common-api
 -->

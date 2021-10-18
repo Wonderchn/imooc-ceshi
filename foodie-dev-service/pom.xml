@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
 
-            <!--        service->mapper ->  pojo -> common
+            <!--        service->mapper ->  mapper -> common
             service 通过mapper是可以使用pojo 与 common相应的方法的
 
 -->
