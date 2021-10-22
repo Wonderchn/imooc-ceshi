@@ -30,4 +30,12 @@ public class StuFooController {
         stuService.updateStu(id);
         return  "OK";
     }
+
+
+    @PostMapping("/deleteStu")
+    public Object deleteStu(int id){
+        stuService.deleteStu(id);
+        return "OK";
+    }
+
 }
