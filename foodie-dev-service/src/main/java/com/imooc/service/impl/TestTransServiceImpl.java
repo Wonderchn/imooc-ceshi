@@ -14,11 +14,11 @@ public class TestTransServiceImpl implements TestTransService {
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void testPropagationTrans() {
-       stuService.saveParent();
+        stuService.saveParent();
 
-       try {
-           //save point
-           stuService.saveChildren();
+        try {
+            //save point
+            stuService.saveChildren();
        }catch(Exception e){
            e.printStackTrace();
        }
