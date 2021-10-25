@@ -30,7 +30,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-           <!--这里说明作用域只在test处-->
             <scope>test</scope>
         </dependency>
     </dependencies>

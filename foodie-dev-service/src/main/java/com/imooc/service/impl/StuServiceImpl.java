@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Service
 public class StuServiceImpl implements StuService {
 
@@ -55,10 +56,11 @@ public class StuServiceImpl implements StuService {
         stuMapper.insert(stu);
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
+//    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void saveChildren() {
         saveChild1();
+        //抛出异常
         int a = 1 / 0;
         saveChild2();
     }
@@ -73,6 +75,7 @@ public class StuServiceImpl implements StuService {
     public void saveChild2(){
         Stu stu2 = new Stu();
         stu2.setName("child-2");
-
+        stu2.setAge(11);
+        stuMapper.insert(stu2);
     }
 }
