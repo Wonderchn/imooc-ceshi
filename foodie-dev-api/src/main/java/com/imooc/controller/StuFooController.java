@@ -12,6 +12,8 @@ public class StuFooController {
     @Autowired
     private StuService stuService;
 
+
+
     @GetMapping("/getStu")
     public Object hello(int id){
         return stuService.getStuInfo(id);
