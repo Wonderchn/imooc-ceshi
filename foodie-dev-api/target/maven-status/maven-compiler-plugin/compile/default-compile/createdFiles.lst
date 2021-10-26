@@ -1,3 +1,4 @@
+com\imooc\config\Swagger2.class
 com\imooc\controller\PassportController.class
 com\imooc\controller\HelloController.class
 com\imooc\Application.class

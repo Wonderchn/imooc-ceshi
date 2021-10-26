@@ -1,12 +1,9 @@
 package com.imooc.service.impl;
 
 import com.imooc.enums.Sex;
-import com.imooc.mapper.StuMapper;
 import com.imooc.mapper.UsersMapper;
-import com.imooc.pojo.Stu;
 import com.imooc.pojo.Users;
 import com.imooc.pojo.bo.UserBO;
-import com.imooc.service.StuService;
 import com.imooc.service.UserService;
 import com.imooc.utils.DateUtil;
 import com.imooc.utils.MD5Utils;
@@ -18,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
-import java.util.List;
 
 
 @Service
@@ -38,7 +34,7 @@ public class UserServiceImpl implements UserService {
         Example.Criteria userCriteria = userExample.createCriteria();
 
 
-        userCriteria.andEqualTo("username", "username");
+        userCriteria.andEqualTo("username", username);
 
         Users result = usersMapper.selectOneByExample(userExample);
 
@@ -75,6 +71,23 @@ public class UserServiceImpl implements UserService {
         usersMapper.insert(user);
         return user;
 
+
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public Users queryUserForLogin(String username, String password) {
+        Example userExample = new Example(Users.class);
+        Example.Criteria userCriteria = userExample.createCriteria();
+
+
+        userCriteria.andEqualTo("username", username);
+        userCriteria.andEqualTo("password", password);
+
+
+        Users result = usersMapper.selectOneByExample(userExample);
+
+        return  result;
 
     }
 }
