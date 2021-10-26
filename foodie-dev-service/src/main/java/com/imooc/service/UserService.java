@@ -6,6 +6,6 @@ public interface UserService {
     /**
      * 判断用户名是否存在
      */
-    public Users queryUsernameIsExist(String username);
+    public boolean queryUsernameIsExist(String username);
 
 }

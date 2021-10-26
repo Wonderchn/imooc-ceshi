@@ -26,7 +26,7 @@ public class TransTest {
     @Test
     public void myTest() {
 //        stuService.testPropagationTrans();
-        testTransService.testPropagationTrans();
+//        testTransService.testPropagationTrans();
     }
 
 }

@@ -24,15 +24,16 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
-    public Users queryUsernameIsExist(String username) {
+    public boolean queryUsernameIsExist(String username) {
         Example userExample = new Example(Users.class);
-        Example.Criteria criteria = userExample.createCriteria();
+        Example.Criteria userCriteria = userExample.createCriteria();
 
-        criteria.andEqualTo("username","username");
 
-        Users users = usersMapper.selectOneByExample(criteria);
+        userCriteria.andEqualTo("username","username");
 
-        return users;
+        Users result = usersMapper.selectOneByExample(userExample);
+
+        return result == null ? false : true;
 
     }
 }
