@@ -80,8 +80,8 @@ public class UserServiceImpl implements UserService {
         Example userExample = new Example(Users.class);
         Example.Criteria userCriteria = userExample.createCriteria();
 
-
         userCriteria.andEqualTo("username", username);
+
         userCriteria.andEqualTo("password", password);
 
 
