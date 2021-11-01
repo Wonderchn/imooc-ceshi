@@ -13,15 +13,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(classes = Application.class)
 public class TransTest {
 
-    @Autowired
-    private StuService stuService;
-
-    @Autowired
-    private TestTransService testTransService;
+//    @Autowired
+//    private StuService stuService;
+//
+//    @Autowired
+//    private TestTransService testTransService;
 
     @Test
     public void myTest() {
