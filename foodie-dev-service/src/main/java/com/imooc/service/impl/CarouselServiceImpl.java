@@ -25,7 +25,7 @@ public class CarouselServiceImpl implements CarouselService {
     public List<Carousel> queryAll(Integer isShow){
 
         Example example = new Example(Carousel.class);
-        example.orderBy("sort").asc();
+        example.orderBy("sort").desc();
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("isShow", isShow);
 

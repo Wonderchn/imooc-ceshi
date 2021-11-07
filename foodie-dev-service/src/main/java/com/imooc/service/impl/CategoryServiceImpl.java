@@ -11,7 +11,9 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author chn
@@ -21,10 +23,14 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryMapper categoryMapper;
 
-    @Autowired
+    @Autowired 
     private CategoryMapperCustom categoryMapperCustom;
 
 
+    /**
+     * 查询所有一级分类
+     * @return
+     */
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<Category> queryAllRootLevleCat() {
@@ -37,6 +43,12 @@ public class CategoryServiceImpl implements CategoryService {
 
     }
 
+
+    /**
+     * 根据一级分类id查询子分类信息
+     * @param rootCatId
+     * @return
+     */
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
     public List<CategoryVO> getSubCatList(Integer rootCatId) {
@@ -44,4 +56,15 @@ public class CategoryServiceImpl implements CategoryService {
 
         return categoryMapperCustom.getSubCatList(rootCatId);
     }
+
+    @Override
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public List getSixNewItemsLazy(Integer rootCatId) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("rootCatId",rootCatId);
+        return categoryMapperCustom.getSixNewItemsLazy(map);
+
+    }
+
+
 }
