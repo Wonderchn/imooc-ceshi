@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.imooc.mapper.ItemsMapperCustom" >
+    <select id="queryItemComments" parameterType="Map" resultType="com.imooc.pojo.vo.ItemCommentVO" >
+        SELECT
+            ic.comment_level as commentLevel,
+            ic.content as content,
+            ic.sepc_name as specName,
+            ic.created_time as createTime,
+            u.face as userFace,
+            u.nickname as nickname
+        FROM
+            items_comments ic
+        LEFT JOIN
+            users u
+        on
+            ic.user_id  = u.id
+        WHERE
+            ic.item_id  =  #{paramsMap.itemId}
+      <if test=" paramsMap.level !=null and paramsMap.level != ''">
+            AND
+            ic.comment_level = #{paramsMap.level}
+      </if>
+    </select>
+
+
+    <select id="searchItems" parameterType="Map" resultType="com.imooc.pojo.vo.ItemCommentVO" >
+       SELECT
+         i.id as itemId,
+         i.item_name as itemName,
+         i.sell_counts as sellCounts,
+         ii.url as imgUrl,
+         tempSpec.price_discount as price
+        FROM
+            items i
+        LEFT JOIN
+            items_img ii
+        ON
+            i.id = ii.item_id
+        LEFT JOIN
+            (SELECT item_id ,MIN(price_discount) as price_discount
+            FROM
+                items_spec
+            GROUP BY
+                item_id)
+            tempSpec
+        ON
+            i.id = tempSpec.item_id
+         WHERE
+            ii.is_main = 1
+    </select>
+</mapper>

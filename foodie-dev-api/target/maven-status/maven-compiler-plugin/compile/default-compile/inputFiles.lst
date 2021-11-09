@@ -2,6 +2,7 @@ D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\IndexC
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\StuFooController.java
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\PassportController.java
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\Application.java
+D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\BaseController.java
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\ItemsController.java
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\config\CorsConfig.java
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\aspect\ServiceLogAspect.java

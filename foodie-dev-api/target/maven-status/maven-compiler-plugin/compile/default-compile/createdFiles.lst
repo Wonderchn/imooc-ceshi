@@ -7,3 +7,4 @@ com\imooc\controller\StuFooController.class
 com\imooc\config\Swagger2.class
 com\imooc\config\CorsConfig.class
 com\imooc\aspect\ServiceLogAspect.class
+com\imooc\controller\BaseController.class
