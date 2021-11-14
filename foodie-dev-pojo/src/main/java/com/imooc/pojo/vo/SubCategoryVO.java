@@ -1,17 +1,17 @@
 package com.imooc.pojo.vo;
 
 public class SubCategoryVO {
-    private Integer sunId;
+    private Integer subId;
     private String subName;
     private String subType;
     private Integer subFatherId;
 
     public Integer getSubId() {
-        return sunId;
+        return subId;
     }
 
-    public void setSubId(Integer sunId) {
-        this.sunId = sunId;
+    public void setSubId(Integer subId) {
+        this.subId = subId;
     }
 
     public String getSubName() {

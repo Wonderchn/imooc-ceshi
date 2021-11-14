@@ -16,4 +16,5 @@ public enum CommentLevel {
         this.type = type;
         this.value = value;
     }
+
 }
