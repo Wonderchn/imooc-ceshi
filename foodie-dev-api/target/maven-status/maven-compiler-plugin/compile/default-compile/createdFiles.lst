@@ -3,6 +3,7 @@ com\imooc\controller\ItemsController.class
 com\imooc\controller\HelloController.class
 com\imooc\controller\StuFooController.class
 com\imooc\config\Swagger2.class
+com\imooc\config\WebMvcConfig.class
 com\imooc\config\CorsConfig.class
 com\imooc\aspect\ServiceLogAspect.class
 com\imooc\controller\OrdersController.class

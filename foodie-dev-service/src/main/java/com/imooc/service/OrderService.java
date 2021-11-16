@@ -5,6 +5,7 @@ import com.imooc.pojo.Category;
 import com.imooc.pojo.bo.SubmitOrderBO;
 import com.imooc.pojo.vo.CategoryVO;
 import com.imooc.pojo.vo.NewItemsVO;
+import com.imooc.pojo.vo.OrderVO;
 
 import java.util.List;
 
@@ -18,6 +19,14 @@ public interface OrderService {
      * @param submitOrderBO
      * @return
      */
-     public void  createOrder(SubmitOrderBO submitOrderBO);
+     public OrderVO createOrder(SubmitOrderBO submitOrderBO);
+
+
+    /**
+     * 修改订单状态
+     * @param orderId
+     * @param orderStatus
+     */
+     public void updateOrderStatus(String orderId,Integer orderStatus);
 
 }
