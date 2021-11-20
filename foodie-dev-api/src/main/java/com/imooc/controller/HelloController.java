@@ -21,6 +21,6 @@ public class  HelloController {
         logger.info("info:hello");
         logger.error("info:hello ");
 
-        return "helloWorld";
+        return "叉烧包快学习";
     }
 }

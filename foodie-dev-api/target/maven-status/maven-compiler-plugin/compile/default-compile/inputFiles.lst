@@ -11,3 +11,6 @@ D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\Orders
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\BaseController.java
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\config\CorsConfig.java
 D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\config\Swagger2.java
+D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\config\OrderJob.java
+D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\config\WebMvcConfig.java
+D:\IdeaSpace\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\center\CenterController.java

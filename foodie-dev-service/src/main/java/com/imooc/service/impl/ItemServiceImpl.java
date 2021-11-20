@@ -116,7 +116,7 @@ public class ItemServiceImpl implements ItemService {
          * page : 第几页
          * pageSize : 每页显示条数
          */
-        PageHelper.startPage(page, pageSize  );
+        PageHelper.startPage(page, pageSize);
         //mybatis-pageHelper
         //mybatis-pageHelper 使用方法 PageHelper.startPage(page, pageSize  );
         //然后需要与pageInfo进行结合。
@@ -205,6 +205,12 @@ public class ItemServiceImpl implements ItemService {
     }
 
 
+    /** 这个方法需要与pageHelper进行相结合
+     *
+     * @param list 这个也就是我们通过Mybatis所查到的返回结果
+     * @param page 我们需要查询的第几页
+     * @return
+     */
     private PagedGridResult setterPagedGrid(List<?> list, Integer page){
         PageInfo<?> pageList = new PageInfo<>(list);
         PagedGridResult grid = new PagedGridResult();
