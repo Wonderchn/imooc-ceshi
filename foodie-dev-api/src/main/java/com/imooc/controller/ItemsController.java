@@ -118,7 +118,7 @@ public class ItemsController extends BaseController{
             page = 1;
         }
         if (pageSize == null){
-            pageSize = PAGE_SIZE;
+            pageSize = COMMENR_PAGE_SIZE;
         }
         PagedGridResult grid = itemService.searhItems(keywords,
                                                                 sort,
