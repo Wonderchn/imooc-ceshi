@@ -7,6 +7,7 @@ com\imooc\service\impl\CategoryServiceImpl.class
 com\imooc\service\impl\StuServiceImpl.class
 com\imooc\service\center\CenterUserService.class
 com\imooc\service\impl\center\CenterUserServiceImpl.class
+com\imooc\service\impl\center\BaseService.class
 com\imooc\service\impl\CarouselServiceImpl.class
 com\imooc\service\impl\TestTransServiceImpl.class
 com\imooc\service\TestTransService.class
