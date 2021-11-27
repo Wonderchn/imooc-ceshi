@@ -7,6 +7,8 @@
     <groupId>com.imooc</groupId>
     <artifactId>foodie-dev</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
     <modules>
         <module>foodie-dev-common</module>
         <module>foodie-dev-pojo</module>
@@ -30,6 +32,13 @@
         <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <!--打包war-->
+                <exclusion>
+                    <groupId>spring-boot-starter-tomcat</groupId>
+                    <artifactId>org.springframework.boot</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -93,6 +102,12 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.21</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
         </dependency>
 
 

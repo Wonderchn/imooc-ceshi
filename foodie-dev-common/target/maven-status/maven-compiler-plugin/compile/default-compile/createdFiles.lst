@@ -15,6 +15,7 @@ org\n3r\idworker\strategy\DefaultRandomCodeStrategy$1.class
 org\n3r\idworker\Sid.class
 org\n3r\idworker\RandomCodeStrategy.class
 org\n3r\idworker\utils\IPv4Utils.class
+com\imooc\enums\OrderStatusEnum.class
 org\n3r\idworker\utils\Props$Silent.class
 org\n3r\idworker\WorkerIdStrategy.class
 com\imooc\utils\DateUtil.class
@@ -26,6 +27,7 @@ org\n3r\idworker\strategy\DayPrefixRandomCodeStrategy.class
 org\n3r\idworker\IdWorker.class
 com\imooc\enums\Sex.class
 org\n3r\idworker\strategy\DefaultWorkerIdStrategy$1.class
+com\imooc\enums\PayMethod.class
 org\n3r\idworker\utils\Serializes.class
 org\n3r\idworker\InvalidSystemClock.class
 org\n3r\idworker\utils\Ip.class
