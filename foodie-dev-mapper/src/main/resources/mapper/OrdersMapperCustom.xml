@@ -23,6 +23,22 @@
         </collection>
     </resultMap>
 
+    <select id="getSubItems" parameterType="String" resultType="com.imooc.pojo.vo.MySubOrderItemVO">
+
+      select
+        oi.item_id as itemId,
+        oi.item_name as itemName,
+        oi.item_img as itemImg,
+        oi.item_spec_name as itemSpecName,
+        oi.buy_counts as buyCounts,
+        oi.price as price
+      from
+        order_items oi
+      where
+        oi.order_id = #{orderId}
+
+    </select>
+
     <select id="queryMyOrders" resultMap="myOrdersVO" parameterType="Map">
         SELECT
         od.id as orderId,
