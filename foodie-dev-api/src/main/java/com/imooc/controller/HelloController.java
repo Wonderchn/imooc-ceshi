@@ -3,6 +3,8 @@ package com.imooc.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
@@ -12,15 +14,12 @@ import springfox.documentation.annotations.ApiIgnore;
 public class  HelloController {
     final static  Logger logger = LoggerFactory.getLogger(HelloController.class);
 
-
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @GetMapping("/hello")
     public Object hello(){
-
-        logger.info("hello");
-        logger.info("info:hello");
-        logger.error("info:hello ");
-
-        return "叉烧包快学习";
+        redisTemplate.opsForValue().set("hello","小鸟");
+        return "测试完成";
     }
 }
