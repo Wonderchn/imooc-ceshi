@@ -3,5 +3,6 @@ server:
 
 spring:
   datasource: # 数据源的相关配置
-    url: jdbc:mysql://42.194.203.16/foodie-shop-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    url: jdbc:mysql://42.194.203.16:3306/foodie-shop-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
     password: a22891522
+
