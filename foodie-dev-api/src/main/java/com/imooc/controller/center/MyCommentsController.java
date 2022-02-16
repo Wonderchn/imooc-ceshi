@@ -98,7 +98,7 @@ public class MyCommentsController  extends BaseController {
             page = 1;
         }
         if (pageSize == null) {
-            pageSize = COMMENR_PAGE_SIZE;
+            pageSize = COMMON_PAGE_SIZE;
         }
 
         PagedGridResult grid = myCommentService.queryMyComments(userId,
