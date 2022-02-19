@@ -13,6 +13,7 @@ com\imooc\Application.class
 com\imooc\controller\center\CenterUserController.class
 com\imooc\controller\IndexController.class
 com\imooc\controller\AddressController.class
+com\imooc\controller\interceptor\UserTokenInterceptor.class
 com\imooc\controller\center\MyOrdersController.class
 com\imooc\config\OrderJob.class
 com\imooc\controller\StuFooController.class

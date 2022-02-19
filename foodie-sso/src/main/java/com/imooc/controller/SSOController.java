@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Enumeration;
 import java.util.UUID;
 
 @Controller
@@ -208,6 +209,16 @@ public class SSOController {
         // 2. 清除用户全局会话（分布式会话）
         redisOperator.del(REDIS_USER_TOKEN + ":" + userId);
 
+        return IMOOCJSONResult.ok();
+    }
+
+
+    @GetMapping("/test")
+    @ResponseBody
+    public IMOOCJSONResult testJson(HttpServletRequest request,
+                                    HttpServletResponse response)throws Exception {
+        String cookie = request.getHeader("Cookie");
+        System.out.println(cookie);
         return IMOOCJSONResult.ok();
     }
 

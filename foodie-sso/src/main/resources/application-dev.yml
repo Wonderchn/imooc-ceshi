@@ -9,7 +9,8 @@ spring:
     database: 1
     host: 127.0.0.1
     port: 6379
-    password: a123456
+    ## 客户端redis 密码
+    password: 123456
 
 mybatis:
   configuration:
