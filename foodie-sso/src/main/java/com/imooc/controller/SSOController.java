@@ -158,8 +158,8 @@ public class SSOController {
     @PostMapping("/verifyTmpTicket")
     @ResponseBody
     public IMOOCJSONResult verifyTmpTicket(String tmpTicket,
-                                           HttpServletRequest request,
-                                           HttpServletResponse response) throws Exception {
+                        HttpServletRequest request,
+                        HttpServletResponse response) throws Exception {
 
         // 使用一次性临时票据来验证用户是否登录，如果登录过，把用户会话信息返回给站点
         // 使用完毕后，需要销毁临时票据
@@ -178,6 +178,7 @@ public class SSOController {
 
         // 1. 验证并且获取用户的userTicket
         String userTicket = getCookie(request, COOKIE_USER_TICKET);
+
         String userId = redisOperator.get(REDIS_USER_TICKET + ":" + userTicket);
         if (StringUtils.isBlank(userId)) {
             return IMOOCJSONResult.errorUserTicket("用户票据异常");
@@ -196,8 +197,8 @@ public class SSOController {
     @PostMapping("/logout")
     @ResponseBody
     public IMOOCJSONResult logout(String userId,
-                                  HttpServletRequest request,
-                                  HttpServletResponse response) throws Exception {
+                               HttpServletRequest request,
+                               HttpServletResponse response) throws Exception {
 
         // 0. 获取CAS中的用户门票
         String userTicket = getCookie(request, COOKIE_USER_TICKET);
@@ -248,7 +249,7 @@ public class SSOController {
     }
 
     private void deleteCookie(String key,
-                              HttpServletResponse response) {
+                           HttpServletResponse response) {
 
         Cookie cookie = new Cookie(key, null);
         cookie.setDomain("sso.com");
@@ -259,6 +260,8 @@ public class SSOController {
 
     private String getCookie(HttpServletRequest request, String key) {
 
+        String cookie = request.getHeader("cookie");
+        System.out.println(cookie);
         Cookie[] cookieList = request.getCookies();
         if (cookieList == null || StringUtils.isBlank(key)) {
             return null;
