@@ -33,13 +33,13 @@
         <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
-<!--            <exclusions>-->
-<!--                &lt;!&ndash;打包war&ndash;&gt;-->
-<!--                <exclusion>-->
-<!--                    <groupId>spring-boot-starter-tomcat</groupId>-->
-<!--                    <artifactId>org.springframework.boot</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
+            <exclusions>
+                <!--打包war-->
+                <exclusion>
+                    <groupId>spring-boot-starter-tomcat</groupId>
+                    <artifactId>org.springframework.boot</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
