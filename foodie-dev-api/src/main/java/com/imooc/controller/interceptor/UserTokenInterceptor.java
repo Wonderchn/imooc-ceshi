@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 public class UserTokenInterceptor implements HandlerInterceptor {
-
     @Autowired
     private RedisOperator redisOperator;
 
