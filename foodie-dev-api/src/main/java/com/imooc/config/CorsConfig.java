@@ -17,7 +17,6 @@ public class CorsConfig {
         //1.添加cors配置信息
         //云服务器相关地址添加
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("http://localhost");
         config.addAllowedOrigin("http://localhost:8080");
         config.addAllowedOrigin("http://42.194.203.16:8080");
         config.addAllowedOrigin("http://42.194.203.16");
