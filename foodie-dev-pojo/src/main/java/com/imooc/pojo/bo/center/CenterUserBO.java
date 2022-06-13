@@ -7,6 +7,9 @@ import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.*;
 import java.util.Date;
 
+/**
+ * 2022年6月13日 测试git提交
+ */
 @ApiModel(value="用户对象", description="从客户端，由用户传入的数据封装在此entity中")
 public class CenterUserBO {
 
