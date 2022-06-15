@@ -7,11 +7,11 @@ import com.imooc.utils.RedisOperator;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +22,7 @@ import static com.imooc.controller.BaseController.FOODIE_SHOPCART;
 @RequestMapping("shopcart")
 @RestController
 public class ShopcatController {
+    @Autowired
     RedisOperator redisOperator;
     @ApiOperation(value = "添加商品到购物车", notes = "添加商品到购物车", httpMethod = "POST")
     @PostMapping("/add")

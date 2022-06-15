@@ -82,8 +82,8 @@ public class MyCommentServiceImpl extends BaseService implements MyCommentServic
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
     public PagedGridResult queryMyComments(String userId, Integer page, Integer pageSize) {
-        Map<String,Object> map = new HashMap<>();
-        map.put("userId",userId);
+        Map<String, Object> map = new HashMap<>();
+        map.put("userId", userId);
         PageHelper.startPage(page, pageSize);
         List<MyCommentVO> list = itemsCommentsMapperCustom.queryMyComments(map);
         return setterPagedGrid(list, page);
