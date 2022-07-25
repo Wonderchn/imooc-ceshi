@@ -46,7 +46,7 @@ public class ItemController {
         }
         page --;
 
-        PagedGridResult grid = itemsESService.searchItems(keywords,
+        PagedGridResult grid = itemsESService.searhItems(keywords,
                 sort,
                 page,
                 pageSize);

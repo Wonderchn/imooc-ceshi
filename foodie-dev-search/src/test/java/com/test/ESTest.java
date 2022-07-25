@@ -94,6 +94,7 @@ public class ESTest {
         GetQuery query = new GetQuery();
         query.setId("1002");
         Stu stu = esTemplate.queryForObject(query, Stu.class);
+        System.out.println(stu);
     }
 
     @Test
