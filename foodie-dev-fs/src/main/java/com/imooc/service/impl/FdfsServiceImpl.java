@@ -21,7 +21,16 @@ public class FdfsServiceImpl implements FdfsService {
     @Autowired
     private FileResource fileResource;
 
+    /**
+     * 上传
+     *
+     * @param file        文件
+     * @param fileExtName 文件名称
+     * @return {@link String}
+     * @throws Exception 异常
+     */
     @Override
+
     public String upload(MultipartFile file, String fileExtName) throws Exception {
 
         StorePath storePath = fastFileStorageClient.uploadFile(file.getInputStream(),
