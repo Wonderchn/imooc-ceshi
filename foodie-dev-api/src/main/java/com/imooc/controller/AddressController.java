@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * @author chn
  */
-@Api(value = "首页",tags = {"地址相关的API"})
+@Api(value = "首页", tags = {"地址相关的API"})
 @RequestMapping("address")
 @RestController
 public class AddressController {
@@ -29,7 +29,6 @@ public class AddressController {
      * 3.删除收货地址
      * 4.修改收货地址
      * 5.设置默认地址
-     *
      */
     @Autowired
     AddressService addressService;
@@ -38,7 +37,7 @@ public class AddressController {
     @PostMapping("/list")
     public IMOOCJSONResult list(
             @RequestParam String userId
-            ) {
+    ) {
 
         if (StringUtils.isBlank(userId)) {
             return IMOOCJSONResult.errorMsg("分类不存在");
@@ -56,7 +55,7 @@ public class AddressController {
     ) {
 
         IMOOCJSONResult checkRes = checkAddress(addressBO);
-        if (checkRes.getStatus() != 200){
+        if (checkRes.getStatus() != 200) {
             return checkRes;
         }
         addressService.addNewUserAddress(addressBO);
@@ -109,11 +108,11 @@ public class AddressController {
     public IMOOCJSONResult update(
             @RequestBody AddressBO addressBO
     ) {
-        if (StringUtils.isBlank(addressBO.getAddressId())){
+        if (StringUtils.isBlank(addressBO.getAddressId())) {
             return IMOOCJSONResult.errorMsg("修改地址错误:addressId不能为空");
         }
         IMOOCJSONResult checkRes = checkAddress(addressBO);
-        if (checkRes.getStatus() != 200){
+        if (checkRes.getStatus() != 200) {
             return checkRes;
         }
         addressService.updateUserAddress(addressBO);
@@ -126,7 +125,7 @@ public class AddressController {
             @RequestParam String userId,
             @RequestParam String addressId
     ) {
-        if (StringUtils.isBlank(userId) || StringUtils.isBlank(addressId)){
+        if (StringUtils.isBlank(userId) || StringUtils.isBlank(addressId)) {
             return IMOOCJSONResult.errorMsg("修改地址错误：addressId不能为空");
         }
 
