@@ -18,12 +18,13 @@ import java.util.List;
 import static com.imooc.controller.BaseController.FOODIE_SHOPCART;
 
 
-@Api(value = "购物车接口controller",tags = {"购物撤相关的API"})
+@Api(value = "购物车接口controller", tags = {"购物撤相关的API"})
 @RequestMapping("shopcart")
 @RestController
 public class ShopcatController {
     @Autowired
     RedisOperator redisOperator;
+
     @ApiOperation(value = "添加商品到购物车", notes = "添加商品到购物车", httpMethod = "POST")
     @PostMapping("/add")
     public IMOOCJSONResult add(
@@ -48,7 +49,7 @@ public class ShopcatController {
             shopcartList = JsonUtils.jsonToList(shopcartJson, ShopcartBO.class);
             // 判断购物车中是否存在已有商品，如果有的话counts累加
             boolean isHaving = false;
-            for (ShopcartBO sc: shopcartList) {
+            for (ShopcartBO sc : shopcartList) {
                 String tmpSpecId = sc.getSpecId();
                 if (tmpSpecId.equals(shopcartBO.getSpecId())) {
                     sc.setBuyCounts(sc.getBuyCounts() + shopcartBO.getBuyCounts());
@@ -72,7 +73,6 @@ public class ShopcatController {
     }
 
 
-
     @ApiOperation(value = "从购物车中删除商品", notes = "从购物车中删除商品", httpMethod = "POST")
     @PostMapping("/del")
     public IMOOCJSONResult del(
@@ -92,7 +92,7 @@ public class ShopcatController {
             // redis中已经有购物车了
             List<ShopcartBO> shopcartList = JsonUtils.jsonToList(shopcartJson, ShopcartBO.class);
             // 判断购物车中是否存在已有商品，如果有的话则删除
-            for (ShopcartBO sc: shopcartList) {
+            for (ShopcartBO sc : shopcartList) {
                 String tmpSpecId = sc.getSpecId();
                 if (tmpSpecId.equals(itemSpecId)) {
                     shopcartList.remove(sc);
