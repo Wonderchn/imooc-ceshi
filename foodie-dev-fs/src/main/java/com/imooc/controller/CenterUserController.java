@@ -1,6 +1,5 @@
 package com.imooc.controller;
 
-import com.github.pagehelper.util.StringUtil;
 import com.imooc.pojo.Users;
 import com.imooc.pojo.vo.UsersVO;
 import com.imooc.resourse.FileResource;
@@ -54,7 +53,7 @@ public class CenterUserController extends BaseController {
 
                 if (!suffix.equalsIgnoreCase("png") &&
                         !suffix.equalsIgnoreCase("jpg") &&
-                        !suffix.equalsIgnoreCase("jpeg") ) {
+                        !suffix.equalsIgnoreCase("jpeg")) {
                     return IMOOCJSONResult.errorMsg("图片格式不正确！");
                 }
 
