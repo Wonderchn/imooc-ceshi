@@ -121,6 +121,7 @@
         </dependency>
 
 
+        <!--  后续引入 knife4j 进行相关值的优化      -->
         <!-- swagger2 配置 -->
         <dependency>
             <groupId>io.springfox</groupId>
