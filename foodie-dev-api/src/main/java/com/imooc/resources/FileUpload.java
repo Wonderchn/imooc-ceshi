@@ -5,7 +5,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
- * @author a1073
+ * 文件上传
+ *
+ *
+ * @date 2024/03/19
  */
 @Component
 @ConfigurationProperties(prefix = "file")

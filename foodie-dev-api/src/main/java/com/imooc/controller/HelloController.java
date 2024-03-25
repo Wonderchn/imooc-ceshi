@@ -19,6 +19,9 @@ public class  HelloController {
 
     @GetMapping("/hello")
     public Object hello(){
+        //key为string类型，值为Integer类型
+        redisTemplate.opsForValue().set("test",1);
+
         redisTemplate.opsForValue().set("hello","小鸟");
         return "测试完成";
     }
